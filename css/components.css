@@ -1,0 +1,30 @@
+@import url("./utilities.css");
+
+.btn{
+    padding: 10px 30px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border-radius: 1rem;
+    border: none;
+    background-color: rgb(241, 241, 241);
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(230, 230, 230);
+}
+.btn-primary{
+    border: none;
+    background-color: var(--primary);
+    color: rgb(255, 255, 255);
+}
+.btn-primary:hover{
+    background-color: var(--primary-hover);
+}
+
+.btn-outline{
+    background-color: white;
+    border: 1px solid #1e111e;
+}
+.btn-block{
+    width: 100%;
+}

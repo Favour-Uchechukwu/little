@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Project</title>
+    <!-- <link rel="stylesheet" href="./css/base.css" / -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100svh;
+        background-color: lightblue;
+
+        position: relative;
+      }
+      main {
+        width: 95%;
+        max-width: 600px;
+        font-family: "Roboto", sans-serif;
+      }
+      main p {
+        text-align: center;
+        font-size: 0.9rem;
+      }
+      main p a {
+        color: #0072bb;
+        text-decoration: none;
+      }
+      h1 {
+        text-align: center;
+        font-family: "Sarabun", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+      }
+      .form {
+        padding: 1.5rem;
+        border-radius: 1rem;
+        background-color: white;
+        margin: 1.5rem 0;
+      }
+      input {
+        border: none;
+        border-radius: 0.5rem;
+        background-color: #f3f3f3;
+      }
+      label input {
+        width: 100%;
+        display: block;
+        padding: 0.8rem 0;
+        padding-left: 10px;
+        margin-bottom: 0.5rem;
+      }
+      label input:focus,
+      label input:active {
+        outline: 1px solid black;
+      }
+      input[type="submit"] {
+        width: 100%;
+        padding: 0.8rem;
+        display: block;
+        cursor: pointer;
+        font-weight: bold;
+        background-color: lightblue;
+      }
+      input[type="submit"]:hover {
+        background-color: #63b6cf;
+      }
+      input[type="checkbox"] {
+        margin-right: 0.3rem;
+        padding: 0.6rem;
+      }
+      .checkbox {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+      }
+      header {
+        background-color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        font-family: "Sarabun", sans-serif;
+      }
+      header section {
+        max-width: 1100px;
+        width: 95%;
+        margin: auto;
+        padding: 1rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      header section h2 {
+        font-size: 1.8rem;
+      }
+      section h2 span {
+        color: lightblue;
+      }
+      section button {
+        font-size: 2rem;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 4px;
+        border-radius: 3px;
+        /* width: 100px; */
+      }
+      section button:focus,
+      section button:active,
+      section button:hover {
+        outline: 2px solid lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <section>
+        <h2>Just<span>Me</span></h2>
+        <button type="menu">&#9776;</button>
+      </section>
+    </header>
+    <main>
+      <h1>Let's Login</h1>
+      <form action="" class="form">
+        <label for="username">
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Username"
+            required
+          />
+        </label>
+        <label for="password">
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+        </label>
+        <div class="checkbox">
+          <input type="checkbox" name="TandC" id="TandC" /><label for="TandC"
+            >Remember Me</label
+          >
+        </div>
+        <input class="submitBtn" type="submit" value="Submit" />
+      </form>
+      <p>Don't have an account? <a href="#">Let's signup</a></p>
+    </main>
+    <script>
+      let submitBtn = document.querySelector(".submitBtn");
+      let form = document.querySelector(".form");
+
+      form.addEventListener("submit", (event) => {
+        console.log(event.target);
+        event.preventDefault();
+      });
+    </script>
+  </body>
+</html>
